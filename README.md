@@ -2,16 +2,15 @@
 
 **2-DOF planar robotic arm** with forward and analytic inverse kinematics, joint-space trajectory planning, and constrained motion execution.
 
-<div style="display: flex; justify-content: center; gap: 16px; align-items: flex-start; margin: 12px 0;">
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; max-width: 420px;">
-    <img src="assets/arm-ezgif.com-speed.gif" alt="Robot arm demo" style="height: 320px; object-fit: contain;">
-    <span style="font-size: 14px; color: #AAA; text-align: center;">GIF of the arm moving through all solutions</span>
-  </div>
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; max-width: 420px;">
-    <img src="assets/system_flow.png" alt="System flow" style="height: 320px; object-fit: contain;">
-    <span style="font-size: 14px; color: #AAA; text-align: center;">System flow diagram</span>
-  </div>
+<div align="center">
+  <img src="assets/arm-ezgif.com-speed.gif" alt="Robot arm demo" width="420" height="320">
+  <img src="assets/system_flow.png" alt="System flow" width="420" height="320">
 </div>
+<p align="center">
+  <sub>GIF of the arm moving through all solutions</sub>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <sub>System flow diagram</sub>
+</p>
 
 ---
 
@@ -48,13 +47,13 @@ Each stage has a **single responsibility**, demonstrating the engineering proces
 
 Forward kinematics maps joint angles to end-effector position:
 
-\[
+```math
 x = L_1 \cos(\theta_1) + L_2 \cos(\theta_1 + \theta_2)
-\]
+```
 
-\[
+```math
 y = L_1 \sin(\theta_1) + L_2 \sin(\theta_1 + \theta_2)
-\]
+```
 
 This is implemented directly and used for:
 - Validating IK solutions
@@ -68,15 +67,15 @@ Before solving IK, the system checks whether a target is **physically reachable*
 
 Let:
 
-\[
+```math
 r = \sqrt{x^2 + y^2}
-\]
+```
 
 A target is reachable **if and only if**:
 
-\[
+```math
 |L_1 - L_2| \le r \le L_1 + L_2
-\]
+```
 
 ### Interpretation
 
@@ -96,29 +95,29 @@ This project uses **analytic inverse kinematics**, not iterative numerical solve
 
 ### Elbow Angle
 
-\[
+```math
 \cos(\theta_2) = \frac{x^2 + y^2 - L_1^2 - L_2^2}{2 L_1 L_2}
-\]
+```
 
 This produces **two solutions/configurations**:
 
 - Elbow-up ($+$)
 - Elbow-down ($-$)
 
-\[
+```math
 \theta_2 = \pm \arccos(\cdot)
-\]
+```
 
 ### Shoulder Angle
 
-\[
+```math
 \theta_1 =
 \arctan2(y, x) -
 \arctan2\left(
 L_2 \sin(\theta_2),
 L_1 + L_2 \cos(\theta_2)
 \right)
-\]
+```
 
 Each reachable target produces **0, 1, or 2 valid joint configurations**.
 
