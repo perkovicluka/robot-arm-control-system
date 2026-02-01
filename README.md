@@ -3,14 +3,20 @@
 **2-DOF planar robotic arm** with forward and analytic inverse kinematics, joint-space trajectory planning, and constrained motion execution.
 
 <div align="center" style="margin: 12px 0;">
-  <div style="display: inline-block; width: 45%; max-width: 420px; min-width: 260px; margin: 0 12px; text-align: center; vertical-align: top;">
-    <img src="assets/arm-ezgif.com-speed.gif" alt="Robot arm demo" style="width: 100%; height: auto; object-fit: contain;">
-    <div style="margin-top: 4px; color: #AAA; font-size: 14px;">GIF of the arm moving through all solutions</div>
-  </div>
-  <div style="display: inline-block; width: 45%; max-width: 420px; min-width: 260px; margin: 0 12px; text-align: center; vertical-align: top;">
-    <img src="assets/system_flow.png" alt="System flow" style="width: 100%; height: auto; object-fit: contain;">
-    <div style="margin-top: 4px; color: #AAA; font-size: 14px;">System flow diagram</div>
-  </div>
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border: none; table-layout: fixed; width: 90%; max-width: 900px;">
+    <tr>
+      <td align="center" valign="top" style="padding: 0 12px; border: none;">
+        <img src="assets/arm-ezgif.com-speed.gif" alt="Robot arm demo" style="max-width: 100%; width: 360px; height: auto; object-fit: contain;">
+      </td>
+      <td align="center" valign="top" style="padding: 0 12px; border: none;">
+        <img src="assets/system_flow.png" alt="System flow" style="max-width: 100%; width: 360px; height: auto; object-fit: contain;">
+      </td>
+    </tr>
+    <tr>
+      <td align="center" style="padding-top: 4px; color: #AAA; font-size: 14px; border: none;">GIF of the arm moving through all solutions</td>
+      <td align="center" style="padding-top: 4px; color: #AAA; font-size: 14px; border: none;">System flow diagram</td>
+    </tr>
+  </table>
 </div>
 
 ---
