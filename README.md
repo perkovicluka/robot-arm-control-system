@@ -2,14 +2,13 @@
 
 **2-DOF planar robotic arm** with forward and analytic inverse kinematics, joint-space trajectory planning, and constrained motion execution.
 
-<div align="center">
-  <img src="assets/arm-ezgif.com-speed.gif" alt="Robot arm demo" width="420" height="320">
-  <img src="assets/system_flow.png" alt="System flow" width="420" height="320">
-</div>
-<p align="center">
-  <sub>GIF of the arm moving through all solutions</sub>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <sub>System flow diagram</sub>
+<p align="center" style="margin: 12px 0;">
+  <img src="assets/arm-ezgif.com-speed.gif" alt="Robot arm demo" style="width: 42%; min-width: 260px; max-width: 360px; height: auto; margin: 0 8px; vertical-align: top;">
+  <img src="assets/system_flow.png" alt="System flow" style="width: 42%; min-width: 260px; max-width: 360px; height: auto; margin: 0 8px; vertical-align: top;">
+</p>
+<p align="center" style="margin: 0 0 12px;">
+  <span style="display: inline-block; width: 42%; min-width: 260px; max-width: 360px; color: #AAA; font-size: 14px; margin: 0 8px;">GIF of the arm moving through all solutions</span>
+  <span style="display: inline-block; width: 42%; min-width: 260px; max-width: 360px; color: #AAA; font-size: 14px; margin: 0 8px;">System flow diagram</span>
 </p>
 
 ---
